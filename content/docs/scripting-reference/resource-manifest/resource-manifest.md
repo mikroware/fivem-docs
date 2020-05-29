@@ -151,6 +151,14 @@ ui_page 'html/index.html'
 file 'html/index.html'
 ```
 
+### ui_page_preload
+
+The internal [NUI]({{< ref "/docs/scripting-manual/nui-development/full-screen-nui.md" >}}) page only loads when it receives a message (`SendNUIMessage`) or when it is focused (`SetNuiFocus`). In most cases this is the most efficient behavior to prevent a lot of NUI frames to be loaded and impact the performance. If the NUI page needs to be created regardless of focus or messages, this option can be used.
+
+```lua
+ui_page_preload "yes"
+```
+
 ### before_level_meta
 
 Loads the specified level meta in the resource before the primary level meta.
