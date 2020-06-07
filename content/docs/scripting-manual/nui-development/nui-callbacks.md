@@ -105,7 +105,7 @@ fetch(`https://${GetParentResourceName()}/getItemInfo`, {
 ---
 
 To prevent requests from stalling, you **have to** return the callback by calling it at all times - even if containing 
-just an empty object, or `{"ok":true}`, or similar. For example `cb({})`.
+just an empty object, or `{"ok":true}`, or similar. For example `cb({})`. Note that the NUI acts like a normal browser, it expects a response to each request to fully close the request.
 
 [registernuicallback]: /docs/scripting-reference/runtimes/lua/functions/RegisterNUICallback/
 [workaround]: https://github.com/citizenfx/fivem/blob/d911ecf638337c7c61fc6728110c92d84a217156/data/shared/citizen/scripting/lua/scheduler.lua#L958
