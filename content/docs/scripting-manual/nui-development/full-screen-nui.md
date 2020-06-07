@@ -12,6 +12,8 @@ The following natives are related to using full-screen NUI:
 * {{<native_link "SEND_NUI_MESSAGE">}}
 * {{<native_link "SET_NUI_FOCUS">}}
 
+Using any of the above natives will load the NUI frame. Messages send to the NUI will be buffered till the first listener is added (globally for all resources).
+
 ## Setting up a fullscreen NUI page
 To assign a full-screen NUI page to a resource, currently you need to specify a single `ui_page` in the
 [resource manifest][resource-manifest] for the resource containing an UI page, like shown below:
